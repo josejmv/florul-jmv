@@ -1,0 +1,142 @@
+{
+  "data": {
+    "type": "node--box-addon",
+    "id": "2ee9f0ef-1b25-4bbe-a00f-8649c68b1f7e",
+    "attributes": {
+      "title": "Caja de aniversario",
+      "message": "Esta caja es especial para una velada romantica con tu pareja, celebra tu aniversario de una manera inolvidable",
+      "created": "6-16-2021T21:00:00.000Z",
+      "modified": "6-16-2021T21:00:00.000Z",
+      "volume": 3,
+      "weight": 4,
+      "dimensions": [1, 2, 3],
+      "photos": [
+        "1ee9f0ef-1b25-4bbe-a00f-8649c68b1f7a",
+        "2ee9f0ef-1b25-4bbe-a00f-8649c68b1f7b",
+        "3ee9f0ef-1b25-4bbe-a00f-8649c68b1f7c"
+      ],
+      "addons": ["53bb14cc-544a-4cf2-88e8-e9cdd0b6948f"]
+    },
+    "relationships": {
+      "media": {
+        "data": [
+          {
+            "type": "node--media",
+            "id": "1ee9f0ef-1b25-4bbe-a00f-8649c68b1f7a",
+            "attributes": {
+              "imagePath": "http://placehold.it/200x200",
+              "author": "JoseJMV",
+              "visibility": 1
+            }
+          },
+          {
+            "type": "node--media",
+            "id": "2ee9f0ef-1b25-4bbe-a00f-8649c68b1f7b",
+            "attributes": {
+              "imagePath": "http://placehold.it/200x300",
+              "author": "JoseJMV",
+              "visibility": 1
+            }
+          },
+          {
+            "type": "node--media",
+            "id": "3ee9f0ef-1b25-4bbe-a00f-8649c68b1f7c",
+            "attributes": {
+              "imagePath": "http://placehold.it/300x200",
+              "author": "JoseJMV",
+              "visibility": 1
+            }
+          }
+        ]
+      },
+      "addons": {
+        "data": [
+          {
+            "type": "node--addon",
+            "id": "53bb14cc-544a-4cf2-88e8-e9cdd0b6948f",
+            "attributes": {
+              "productType": "53bb14cc-awds-4cf2-88e8-e9cdd0b6948f",
+              "company": "53bb14cc-544a-4cf2-awdasd-e9cdd0b6948f",
+              "price": 20,
+              "unitDescription": "por 50 petalos",
+              "photo": "53bb14cc-544a-4cf2-awdasd-awdasdawdasdadw",
+              "description": "Disfruta del agradable olor de los petalos frescos, relajate y toma un baño placentero",
+              "weight": 5,
+              "volume": 4,
+              "dimension": [1, 2, 3],
+              "sourceGPS": [100.2, -10.3],
+              "shelfLife": 10,
+              "premiumScale": 7,
+              "Attributes": []
+            },
+            "relationships": {
+              "productType": {
+                "data": {
+                  "type": "node--product",
+                  "id": "53bb14cc-awds-4cf2-88e8-e9cdd0b6948f",
+                  "attributes": {
+                    "category": "flowers",
+                    "name": "petalos frescos",
+                    "photos": [
+                      "53bb14cc-544a-4cf2-awdasd-awdasdaxcvasw",
+                      "53bqwes-544a-4cf2-dasd-awdasdaxcvasw"
+                    ]
+                  },
+                  "relationships": {
+                    "media": {
+                      "data": [
+                        {
+                          "type": "node--media",
+                          "id": "53bb14cc-544a-4cf2-awdasd-awdasdaxcvasw",
+                          "attributes": {
+                            "imagePath": "http://placehold.it/300x400",
+                            "author": "JoseJMV",
+                            "visibility": 1
+                          }
+                        },
+                        {
+                          "type": "node--media",
+                          "id": "53bqwes-544a-4cf2-dasd-awdasdaxcvasw",
+                          "attributes": {
+                            "imagePath": "http://placehold.it/400x300",
+                            "author": "JoseJMV",
+                            "visibility": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "company": {
+                "data": {
+                  "type": "node--company",
+                  "id": "53bb14cc-544a-4cf2-awdasd-e9cdd0b6948f",
+                  "attributes": {
+                    "owner": "12345-abcd-4cf2-awdasd-e9cdd0b6948f",
+                    "name": "florul",
+                    "locale": "ve",
+                    "adress": "San Cristobal, centro",
+                    "phone": "123-456-789",
+                    "website": "https://florul.vercel.app"
+                  }
+                }
+              },
+              "media": {
+                "data": {
+                  "type": "node--media",
+                  "id": "53bb14cc-544a-4cf2-awdasd-awdasdawdasdadw",
+                  "attributes": {
+                    "imagePath": "http://placehold.it/300x300",
+                    "author": "JoseJMV",
+                    "visibility": 1
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
