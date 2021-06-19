@@ -1,0 +1,9 @@
+{
+  "data": {
+    "type": "node--login",
+    "attributes": {
+      "token": "this-is-my-awezome-token-with-userid-1234",
+      "rol": "Admin"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "type": "node--all-users",
+    "id": "67890-abcd-4cf2-awdasd-e9cdd0b6948f",
+    "attributes": {
+      "email": "josejmvasquez@gmail.com",
+      "firstName": "Jose Manuel",
+      "lastName": "Vasquez Vargas",
+      "avatar": "https://avatars.githubusercontent.com/u/33255350?s=400&u=07cc27cb552060d89942c26019b2120c6997d4d5&v=4",
+      "pictures": [],
+      "banner": "default image url",
+      "bookings": []
+    }
+  }
+}
