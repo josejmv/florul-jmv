@@ -1,0 +1,86 @@
+{
+  "data": {
+    "type": "node--addon",
+    "id": "53bb14cc-544a-4cf2-88e8-e9cdd0b6948f",
+    "attributes": {
+      "productType": "53bb14cc-awds-4cf2-88e8-e9cdd0b6948f",
+      "company": "53bb14cc-544a-4cf2-awdasd-e9cdd0b6948f",
+      "price": 20,
+      "unitDescription": "por 50 petalos",
+      "photo": "53bb14cc-544a-4cf2-awdasd-awdasdawdasdadw",
+      "description": "Disfruta del agradable olor de los petalos frescos, relajate y toma un baño placentero",
+      "weight": 5,
+      "volume": 4,
+      "dimension": [1, 2, 3],
+      "sourceGPS": [100.2, -10.3],
+      "shelfLife": 10,
+      "premiumScale": 7,
+      "Attributes": []
+    },
+    "relationships": {
+      "productType": {
+        "data": {
+          "type": "node--product",
+          "id": "53bb14cc-awds-4cf2-88e8-e9cdd0b6948f",
+          "attributes": {
+            "category": "flowers",
+            "name": "petalos frescos",
+            "photos": [
+              "53bb14cc-544a-4cf2-awdasd-awdasdaxcvasw",
+              "53bqwes-544a-4cf2-dasd-awdasdaxcvasw"
+            ]
+          },
+          "relationships": {
+            "media": {
+              "data": [
+                {
+                  "type": "node--media",
+                  "id": "53bb14cc-544a-4cf2-awdasd-awdasdaxcvasw",
+                  "attributes": {
+                    "imagePath": "http://placehold.it/300x400",
+                    "author": "JoseJMV",
+                    "visibility": 1
+                  }
+                },
+                {
+                  "type": "node--media",
+                  "id": "53bqwes-544a-4cf2-dasd-awdasdaxcvasw",
+                  "attributes": {
+                    "imagePath": "http://placehold.it/400x300",
+                    "author": "JoseJMV",
+                    "visibility": 1
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "company": {
+        "data": {
+          "type": "node--company",
+          "id": "53bb14cc-544a-4cf2-awdasd-e9cdd0b6948f",
+          "attributes": {
+            "owner": "12345-abcd-4cf2-awdasd-e9cdd0b6948f",
+            "name": "florul",
+            "locale": "ve",
+            "adress": "San Cristobal, centro",
+            "phone": "123-456-789",
+            "website": "https://florul.vercel.app"
+          }
+        }
+      },
+      "media": {
+        "data": {
+          "type": "node--media",
+          "id": "53bb14cc-544a-4cf2-awdasd-awdasdawdasdadw",
+          "attributes": {
+            "imagePath": "http://placehold.it/300x300",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
+      }
+    }
+  }
+}

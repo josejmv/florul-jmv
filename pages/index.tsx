@@ -1,15 +1,29 @@
+// next components
+import Link from 'next/link'
+
+// components
+import { Layout } from 'components/atoms'
+
+// bootstrap components
+import { Button } from 'react-bootstrap'
+
 // styles
-import styles from 'styles/Home.module.scss'
+import styles from 'styles/home.module.scss'
 
 // types
 import type { FC } from 'react'
 
 const Home: FC = () => (
-  <div className={styles.container}>
-    <main className={styles.main}>
-      <h1 className={styles.title}>Welcome to Florul</h1>
-    </main>
-  </div>
+  <Layout>
+    <div className={styles.container}>
+      <h1>Welcome to Florül</h1>
+      <Link passHref href='/booking'>
+        <Button as='a' variant='secondary'>
+          Prepare your box
+        </Button>
+      </Link>
+    </div>
+  </Layout>
 )
 
 export default Home

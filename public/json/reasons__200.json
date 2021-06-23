@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Anniversary"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Birthday"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Wedding Night"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Bridal Ritual"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Self Love"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Moon Ritual"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "Detox"
+      }
+    },
+    {
+      "type": "node--box-reazons",
+      "attributes": {
+        "title": "I’m a witch"
+      }
+    }
+  ]
+}

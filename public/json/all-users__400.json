@@ -1,21 +1,14 @@
 {
   "error": [
     {
-      "id": "error-id-1",
-      "links": {
-        "about": "https://www.dotcom-monitor.com/wiki/es/knowledge-base/http-status-codes/"
-      },
+      "actions": [
+        {
+          "title": "Login",
+          "link": "/login"
+        }
+      ],
       "status": 400,
-      "code": "pagina debe ser de tipo number, se ha obtenido un dato de tipo string",
-      "title": "Error",
-      "detail": "descripcion del error",
-      "source": {
-        "pointer": "/data/attributes/page",
-        "parameter": "all-users-page"
-      },
-      "meta": {
-        "data": "no se que informacion hay aqui"
-      }
+      "message": "pagina debe ser de tipo number, se ha obtenido un dato de tipo string"
     }
   ]
 }

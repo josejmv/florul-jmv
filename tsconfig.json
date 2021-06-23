@@ -4,7 +4,9 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./src",
     "paths": {
-      "@jsons/*": ["../public/json/*"]
+      "@jsons/*": ["../public/json/*"],
+      "@atoms/*": ["components/atoms/*"],
+      "@molecules/*": ["components/molecules/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

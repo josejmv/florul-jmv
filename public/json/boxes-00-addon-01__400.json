@@ -1,21 +1,14 @@
 {
   "error": [
     {
-      "id": "error-id-1",
-      "links": {
-        "about": "https://www.dotcom-monitor.com/wiki/es/knowledge-base/http-status-codes/"
-      },
+      "actions": [
+        {
+          "title": "Login",
+          "link": "/login"
+        }
+      ],
       "status": 400,
-      "code": "Error en linea 45, no se puede leer la title de undefined",
-      "title": "Error",
-      "detail": "descripcion del error",
-      "source": {
-        "pointer": "/data/attributes/title",
-        "parameter": "box-id-123"
-      },
-      "meta": {
-        "data": "no se que informacion hay aqui"
-      }
+      "message": "Error en linea 45, no se puede leer la variable title de undefined"
     }
   ]
 }

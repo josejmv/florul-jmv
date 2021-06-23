@@ -1,0 +1,17 @@
+.title {
+  font-size: 36px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.calendars {
+  flex-direction: column;
+  &_input,
+  &_inline {
+    width: 100%;
+  }
+
+  &_input {
+    margin-bottom: 10px;
+  }
+}
