@@ -2,7 +2,6 @@
 import { useState } from 'react'
 
 // prime components
-import { Sidebar } from 'primereact/sidebar'
 import { Toast } from 'primereact/toast'
 
 // context
@@ -17,22 +16,16 @@ import 'styles/globals.scss'
 // types
 import type { FC } from 'react'
 import type { AppProps } from 'next/app'
+import type { AppUtilsType } from 'types/context'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
-  const [showSidebar, setShowSidebar] = useState(false)
   const [showToast, setShowToast] = useState<Toast>(undefined)
-  const context = { setShowSidebar, showToast }
+  const context: AppUtilsType = { showToast }
 
-  const handleShowSidebar = () => setShowSidebar(false)
   const handleSetToast = (el: Toast) => setShowToast(el)
 
   return (
     <>
-      <Sidebar
-        visible={showSidebar}
-        onHide={handleShowSidebar}
-        position='right'
-      />
       <Toast ref={handleSetToast} position='bottom-left' />
 
       <GlobalUtils.Provider value={context}>

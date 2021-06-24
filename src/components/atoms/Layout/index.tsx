@@ -11,13 +11,18 @@ import { Header } from '@molecules/index'
 import { FC } from 'react'
 import type { LayoutType } from 'types'
 
-export const Layout: FC<LayoutType> = ({ title, bg, children }) => (
+export const Layout: FC<LayoutType> = ({
+  title,
+  bg,
+  setShowSidebar,
+  children,
+}) => (
   <>
     <Head>
       <title>Florül {title && `| ${title}`}</title>
     </Head>
 
-    <Header bg={bg} />
+    <Header bg={bg} setShowSidebar={setShowSidebar} />
     <Container as='main' className='py-5'>
       {children}
     </Container>
