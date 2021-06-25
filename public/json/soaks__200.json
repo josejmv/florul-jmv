@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "type": "node--box-soak",
+      "attributes": {
+        "color": "Purple",
+        "scent": "Lavender",
+        "hex": "#834DAE"
+      }
+    },
+    {
+      "type": "node--box-soak",
+      "attributes": {
+        "color": "Turqouise Blue",
+        "scent": "Eucalyptus",
+        "hex": "#189FBD"
+      }
+    },
+    {
+      "type": "node--box-soak",
+      "attributes": {
+        "color": "Peach",
+        "scent": "Orange",
+        "hex": "#F08080"
+      }
+    },
+    {
+      "type": "node--box-soak",
+      "attributes": {
+        "color": "Deep Green",
+        "scent": "Tea Tree",
+        "hex": "#45A24F"
+      }
+    },
+    {
+      "type": "node--box-soak",
+      "attributes": {
+        "color": "Fuschia",
+        "scent": "Jasmine",
+        "hex": "#C96589"
+      }
+    },
+    {
+      "type": "node--box-soak",
+      "attributes": {
+        "color": "Milky White",
+        "scent": "Rose & Honey",
+        "hex": "#F0EFEF"
+      }
+    }
+  ]
+}

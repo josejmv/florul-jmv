@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "type": "node--box-size",
+      "attributes": {
+        "title": "Small",
+        "description": "fits one person maximum",
+        "image": "123-abc"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--image",
+          "id": "123-abc",
+          "attributes": {
+            "src": "/assets/imgs/bath.svg",
+            "width": 130,
+            "height": 270,
+            "alt": "small bath"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--box-size",
+      "attributes": {
+        "title": "Medium",
+        "description": "can fit two people comfortably",
+        "image": "456-def"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--image",
+          "id": "456-def",
+          "attributes": {
+            "src": "/assets/imgs/bath.svg",
+            "width": 160,
+            "height": 340,
+            "alt": "medium bath"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--box-size",
+      "attributes": {
+        "title": "Large",
+        "description": "can fit two to three people comfortably",
+        "image": "789-ghi"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--image",
+          "id": "789-ghi",
+          "attributes": {
+            "src": "/assets/imgs/bath.svg",
+            "width": 250,
+            "height": 400,
+            "alt": "large bath"
+          }
+        }
+      }
+    }
+  ]
+}

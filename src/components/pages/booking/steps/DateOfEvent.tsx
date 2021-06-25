@@ -11,7 +11,7 @@ import { Calendar, CalendarChangeParams } from 'primereact/calendar'
 import { GlobalUtils } from 'context/GlobalUtils'
 
 // styles
-import styles from 'styles/pages/booking/date.module.scss'
+import styles from 'styles/pages/booking/DateOfEvent.module.scss'
 
 // types
 import type { FC } from 'react'

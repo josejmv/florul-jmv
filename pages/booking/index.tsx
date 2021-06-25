@@ -23,16 +23,18 @@ import type { FC } from 'react'
 
 const Booking: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false)
-  const [key, setKey] = useState(10)
+  const [key, setKey] = useState(15)
   const [data, dispatch] = useReducer(BookingManagement, INITIAL_DATA)
 
   const steps = {
-    10: <STEPS.Reason dispatch={dispatch} />,
-    20: <STEPS.DateOfEvent dispatch={dispatch} />,
+    15: <STEPS.Reason dispatch={dispatch} />,
+    30: <STEPS.DateOfEvent dispatch={dispatch} />,
+    45: <STEPS.Size dispatch={dispatch} />,
+    60: <STEPS.Soak dispatch={dispatch} />,
   }
 
-  const handleNextStep = () => setKey(key < 20 ? key + 10 : key)
-  const handlePrevStep = () => setKey(key > 10 ? key - 10 : key)
+  const handleNextStep = () => setKey(key < 60 ? key + 15 : key)
+  const handlePrevStep = () => setKey(key > 15 ? key - 15 : key)
 
   return (
     <Layout bg='white' title='booking' setShowSidebar={setShowSidebar}>
