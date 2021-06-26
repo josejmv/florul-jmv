@@ -2,48 +2,56 @@
   "data": [
     {
       "type": "node--box-reazons",
+      "id": "1",
       "attributes": {
         "title": "Anniversary"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "2",
       "attributes": {
         "title": "Birthday"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "3",
       "attributes": {
         "title": "Wedding Night"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "4",
       "attributes": {
         "title": "Bridal Ritual"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "5",
       "attributes": {
         "title": "Self Love"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "6",
       "attributes": {
         "title": "Moon Ritual"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "7",
       "attributes": {
         "title": "Detox"
       }
     },
     {
       "type": "node--box-reazons",
+      "id": "8",
       "attributes": {
         "title": "I’m a witch"
       }

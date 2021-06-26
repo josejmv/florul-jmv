@@ -15,17 +15,20 @@ import styles from 'styles/pages/booking/reason.module.scss'
 import type { FC } from 'react'
 import type { StepType, ReasonType } from 'types/pages/booking'
 
-export const Reason: FC<StepType> = ({ dispatch }) => {
+export const Reason: FC<StepType> = ({ data, dispatch }) => {
   const [reasons, setReasons] = useState([])
   const { showToast } = useContext(GlobalUtils)
 
-  const handleClick = (title: string) => {
-    dispatch({ type: 'handleChange', payload: { name: 'title', value: title } })
+  const handleClick = (reason: ReasonType) => {
+    dispatch({
+      type: 'handleChange',
+      payload: { name: 'reason', value: reason },
+    })
 
     showToast.show({
       severity: 'success',
       summary: 'Reazon',
-      detail: title,
+      detail: reason.attributes.title,
       life: 4000,
     })
   }
@@ -52,19 +55,19 @@ export const Reason: FC<StepType> = ({ dispatch }) => {
       <h2 className={styles.title}>What is this bath for?</h2>
 
       <Row>
-        {reasons.map(({ attributes, type }: ReasonType, idx: number) => (
+        {reasons.map((reason: ReasonType, idx: number) => (
           <Col key={idx} xs={6} sm={4} lg={3} className={styles.container}>
-            <Card
-              onClick={() => handleClick(attributes.title)}
-              className={styles.card}
-            >
+            <Card onClick={() => handleClick(reason)} className={styles.card}>
               <Card.Img
                 className={styles.card_img}
                 src='http://placehold.it/100x100'
-                alt={type}
+                alt={reason.type}
               />
               <Card.ImgOverlay className={styles.card_content}>
-                <Card.Title>{attributes.title}</Card.Title>
+                <Card.Title>{reason.attributes.title}</Card.Title>
+                {data.reason.attributes.title === reason.attributes.title && (
+                  <i className={`pi pi-check-circle ${styles.card_checked}`} />
+                )}
               </Card.ImgOverlay>
             </Card>
           </Col>

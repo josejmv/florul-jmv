@@ -5,7 +5,8 @@
       "attributes": {
         "color": "Purple",
         "scent": "Lavender",
-        "hex": "#834DAE"
+        "hex": "#834DAE",
+        "price": 5
       }
     },
     {
@@ -13,7 +14,8 @@
       "attributes": {
         "color": "Turqouise Blue",
         "scent": "Eucalyptus",
-        "hex": "#189FBD"
+        "hex": "#189FBD",
+        "price": 5
       }
     },
     {
@@ -21,7 +23,8 @@
       "attributes": {
         "color": "Peach",
         "scent": "Orange",
-        "hex": "#F08080"
+        "hex": "#F08080",
+        "price": 5
       }
     },
     {
@@ -29,7 +32,8 @@
       "attributes": {
         "color": "Deep Green",
         "scent": "Tea Tree",
-        "hex": "#45A24F"
+        "hex": "#45A24F",
+        "price": 5
       }
     },
     {
@@ -37,7 +41,8 @@
       "attributes": {
         "color": "Fuschia",
         "scent": "Jasmine",
-        "hex": "#C96589"
+        "hex": "#C96589",
+        "price": 5
       }
     },
     {
@@ -45,7 +50,8 @@
       "attributes": {
         "color": "Milky White",
         "scent": "Rose & Honey",
-        "hex": "#F0EFEF"
+        "hex": "#F0EFEF",
+        "price": 5
       }
     }
   ]

@@ -1,5 +1,5 @@
 // main tools
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 
 // bootstrap components
 import { Row, Col } from 'react-bootstrap'
@@ -17,8 +17,7 @@ import styles from 'styles/pages/booking/DateOfEvent.module.scss'
 import type { FC } from 'react'
 import type { StepType } from 'types/pages/booking'
 
-export const DateOfEvent: FC<StepType> = ({ dispatch }) => {
-  const [date, setDate] = useState(new Date())
+export const DateOfEvent: FC<StepType> = ({ data, dispatch }) => {
   const { showToast } = useContext(GlobalUtils)
 
   const handleChange = (ev: CalendarChangeParams) => {
@@ -26,7 +25,6 @@ export const DateOfEvent: FC<StepType> = ({ dispatch }) => {
       type: 'handleChange',
       payload: { name: 'date', value: ev.value as Date },
     })
-    setDate(ev.value as Date)
 
     showToast.show({
       severity: 'success',
@@ -45,10 +43,11 @@ export const DateOfEvent: FC<StepType> = ({ dispatch }) => {
           <p>
             <b>Estimated Shipment Date:</b>
           </p>
-          {date && (
+          {data.date && (
             <p>
               <b>
-                {date.getDate()}/{date.getMonth()}/{date.getFullYear()}
+                {data.date.getDate()}/{data.date.getMonth()}/
+                {data.date.getFullYear()}
               </b>
             </p>
           )}
@@ -56,7 +55,7 @@ export const DateOfEvent: FC<StepType> = ({ dispatch }) => {
         <Col xs={6} className={styles.calendars}>
           <Calendar
             showIcon
-            value={date}
+            value={data.date}
             showOnFocus={false}
             onChange={handleChange}
             dateFormat='dd/mm/yy'
@@ -65,7 +64,7 @@ export const DateOfEvent: FC<StepType> = ({ dispatch }) => {
           />
           <Calendar
             inline
-            value={date}
+            value={data.date}
             onChange={handleChange}
             dateFormat='dd/mm/yy'
             minDate={new Date()}

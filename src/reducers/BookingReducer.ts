@@ -4,17 +4,48 @@ import * as ACTION from 'actions/BookingActions'
 // types
 import { BookingStateType, BookingActionType } from 'types/reducers'
 
-export const INITIAL_DATA = {
+export const INITIAL_DATA: BookingStateType = {
   price: 0,
   date: null,
-  title: '',
   message: '',
-  size: '',
-  soak: '',
   imperfectPetals: false,
   imperfectHeads: false,
   flowers: [],
   addons: [],
+  reason: {
+    type: '',
+    id: '',
+    attributes: {
+      title: '',
+    },
+  },
+  size: {
+    type: '',
+    id: '',
+    attributes: {
+      title: '',
+      description: '',
+      image: '',
+      price: 0,
+    },
+  },
+  volume: {
+    type: '',
+    id: '',
+    attributes: {
+      image: '',
+      title: '',
+    },
+  },
+  soak: {
+    type: '',
+    id: '',
+    attributes: {
+      color: '',
+      hex: '',
+      scent: '',
+    },
+  },
 }
 
 export function BookingManagement(
@@ -24,10 +55,8 @@ export function BookingManagement(
   switch (action.type) {
     case 'handleChange':
       return ACTION.handleChange(state, action.payload)
-    case 'handleFlowers':
-      return ACTION.handleFlowers(state, action.payload)
-    case 'handleAddons':
-      return ACTION.handleAddons(state, action.payload)
+    case 'handleAddItems':
+      return ACTION.handleAddItems(state, action.payload)
     default:
       return { ...state }
   }

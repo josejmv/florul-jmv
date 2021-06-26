@@ -1,11 +1,10 @@
 {
   "data": [
     {
-      "type": "node--box-size",
+      "type": "node--box-volume",
       "attributes": {
-        "title": "Small",
-        "description": "fits one person maximum",
-        "price": 5,
+        "title": "Light",
+        "price": 2,
         "image": "123-abc"
       },
       "relationships": {
@@ -13,20 +12,19 @@
           "type": "node--image",
           "id": "123-abc",
           "attributes": {
-            "src": "/assets/imgs/bath.svg",
+            "src": "/assets/imgs/light.svg",
             "width": 130,
             "height": 270,
-            "alt": "small bath"
+            "alt": "light flowers"
           }
         }
       }
     },
     {
-      "type": "node--box-size",
+      "type": "node--box-volume",
       "attributes": {
-        "title": "Medium",
-        "description": "can fit two people comfortably",
-        "price": 10,
+        "title": "Scattered",
+        "price": 4,
         "image": "456-def"
       },
       "relationships": {
@@ -34,20 +32,19 @@
           "type": "node--image",
           "id": "456-def",
           "attributes": {
-            "src": "/assets/imgs/bath.svg",
+            "src": "/assets/imgs/scattered.svg",
             "width": 160,
             "height": 340,
-            "alt": "medium bath"
+            "alt": "Scattered flowers"
           }
         }
       }
     },
     {
-      "type": "node--box-size",
+      "type": "node--box-volume",
       "attributes": {
-        "title": "Large",
-        "description": "can fit two to three people comfortably",
-        "price": 15,
+        "title": "Full",
+        "price": 6,
         "image": "789-ghi"
       },
       "relationships": {
@@ -55,10 +52,10 @@
           "type": "node--image",
           "id": "789-ghi",
           "attributes": {
-            "src": "/assets/imgs/bath.svg",
+            "src": "/assets/imgs/full.svg",
             "width": 250,
             "height": 400,
-            "alt": "large bath"
+            "alt": "Full flowers"
           }
         }
       }

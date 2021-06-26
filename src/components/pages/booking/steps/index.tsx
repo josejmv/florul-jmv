@@ -1,4 +1,7 @@
 export { Reason } from './Reason'
 export { DateOfEvent } from './DateOfEvent'
 export { Size } from './Size'
+export { Volume } from './Volume'
 export { Soak } from './Soak'
+export { Flowers } from './Flowers'
+export { Addons } from './Addons'

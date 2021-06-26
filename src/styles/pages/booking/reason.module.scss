@@ -14,12 +14,20 @@
 }
 
 .card {
+  position: relative;
   border: none;
   transition: filter 0.3s;
   &:hover {
     cursor: pointer;
     filter: brightness(0.7);
     transition: filter 0.3s;
+  }
+  &_checked {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 20px;
   }
   &_img {
     object-fit: cover;

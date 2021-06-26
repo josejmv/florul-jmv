@@ -1,0 +1,173 @@
+{
+  "data": [
+    {
+      "type": "node--addon",
+      "id": "53bb14cc-544a-4cf2-88e8-e9cdd0b6948f",
+      "attributes": {
+        "taxonomy": "53bb14cc-awds-4cf2-88e8-e9cdd0b6948f",
+        "company": "53bb14cc-544a-4cf2-awdasd-e9cdd0b6948f",
+        "price": 10,
+        "unitDescription": "1 candelabro",
+        "image": "53bb14cc-544a-4cf2-awdasd-awdasdawdasdadw",
+        "description": "Ilumina tu zona de forma elegante",
+        "weight": 5,
+        "volume": 4,
+        "dimension": [1, 2, 3],
+        "sourceGPS": [100.2, -10.3],
+        "shelfLife": -1,
+        "premiumScale": 7
+      },
+      "relationships": {
+        "taxonomy": {
+          "type": "node--taxonomy",
+          "id": "53bb14cc-awds-4cf2-88e8-e9cdd0b6948f",
+          "attributes": {
+            "category": "Candles",
+            "name": "Candelabros",
+            "images": [
+              "53bb14cc-544a-4cf2-awdasd-awdasdaxcvasw",
+              "53bqwes-544a-4cf2-dasd-awdasdaxcvasw"
+            ]
+          },
+          "relationships": {
+            "images": [
+              {
+                "type": "node--media",
+                "id": "53bb14cc-544a-4cf2-awdasd-awdasdaxcvasw",
+                "attributes": {
+                  "src": "http://placehold.it/300x400",
+                  "height": 300,
+                  "width": 300,
+                  "alt": "Candle",
+                  "author": "JoseJMV",
+                  "visibility": 1
+                }
+              },
+              {
+                "type": "node--media",
+                "id": "53bqwes-544a-4cf2-dasd-awdasdaxcvasw",
+                "attributes": {
+                  "src": "http://placehold.it/400x300",
+                  "height": 300,
+                  "width": 300,
+                  "alt": "Candle",
+                  "author": "JoseJMV",
+                  "visibility": 1
+                }
+              }
+            ]
+          }
+        },
+        "company": {
+          "type": "node--company",
+          "id": "53bb14cc-544a-4cf2-awdasd-e9cdd0b6948f",
+          "attributes": {
+            "owner": "JoseJMV",
+            "ownerId": null,
+            "name": "florul",
+            "locale": "ve",
+            "adress": "San Cristobal, centro",
+            "phone": "123-456-789",
+            "website": "https://florul.vercel.app"
+          }
+        },
+        "image": {
+          "type": "node--media",
+          "id": "53bb14cc-544a-4cf2-awdasd-awdasdawdasdadw",
+          "attributes": {
+            "src": "/assets/product_types/Candles/Candles-XAfcz6gs.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "Candle",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "node--addon",
+      "id": "53bb14cc-544a-4cf2-88e8-e9cqweqweqwe",
+      "attributes": {
+        "taxonomy": "53bb14cc-awds-4cf2-88e8-e9cdd0bqweewq",
+        "company": "53bb14cc-544a-4cf2-awdasd-e9cdd0asdfds",
+        "price": 15,
+        "unitDescription": "1 Bata de baño",
+        "photo": "53bb14cc-544a-4cf2-awdasd-awdasdazxccxz",
+        "description": "Sientete comodo con nuestras batas de algodon",
+        "weight": 5,
+        "volume": 4,
+        "dimension": [1, 2, 3],
+        "sourceGPS": [100.2, -10.3],
+        "shelfLife": -1,
+        "premiumScale": 7
+      },
+      "relationships": {
+        "taxonomy": {
+          "type": "node--taxonomy",
+          "id": "53bb14cc-awds-4cf2-88e8-e9cdd0bqweewq",
+          "attributes": {
+            "category": "Clothing",
+            "name": "Ropa",
+            "images": [
+              "53bb14cc-544a-4cf2-awdasd-awd123321",
+              "53bqwes-544a-4cf2-dasd-awda456654"
+            ]
+          },
+          "relationships": {
+            "images": [
+              {
+                "type": "node--media",
+                "id": "53bb14cc-544a-4cf2-awdasd-awd123321",
+                "attributes": {
+                  "src": "http://placehold.it/350x350",
+                  "width": 350,
+                  "height": 350,
+                  "alt": "clothing",
+                  "author": "JoseJMV",
+                  "visibility": 1
+                }
+              },
+              {
+                "type": "node--media",
+                "id": "53bqwes-544a-4cf2-dasd-awda456654",
+                "attributes": {
+                  "src": "http://placehold.it/450x350",
+                  "width": 350,
+                  "height": 350,
+                  "alt": "clothing",
+                  "author": "JoseJMV",
+                  "visibility": 1
+                }
+              }
+            ]
+          }
+        },
+        "company": {
+          "type": "node--company",
+          "id": "53bb14cc-544a-4cf2-awdasd-e9cdd0asdfds",
+          "attributes": {
+            "owner": "JoseJMV",
+            "name": "florul",
+            "locale": "ve",
+            "adress": "San Cristobal, Barrio obrero",
+            "phone": "123-456-789",
+            "website": "https://florul.vercel.app"
+          }
+        },
+        "image": {
+          "type": "node--media",
+          "id": "53bb14cc-544a-4cf2-awdasd-awdasdazxccxz",
+          "attributes": {
+            "src": "/assets/product_types/Clothing/Clothing-69hcz6gs.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "clothing",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
+      }
+    }
+  ]
+}

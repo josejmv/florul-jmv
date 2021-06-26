@@ -6,7 +6,7 @@ import axios from 'axios'
 import { Row, Col } from 'react-bootstrap'
 
 // prime components
-import { RadioButton } from 'primereact/radiobutton'
+import { RadioButton, RadioButtonChangeParams } from 'primereact/radiobutton'
 
 // Next components
 import Image from 'next/image'
@@ -15,26 +15,26 @@ import Image from 'next/image'
 import { GlobalUtils } from 'context/GlobalUtils'
 
 // styles
-import styles from 'styles/pages/booking/size.module.scss'
+import styles from 'styles/pages/booking/volume.module.scss'
 
 // types
 import type { FC } from 'react'
-import type { StepType, SizeType } from 'types/pages/booking'
+import type { StepType, VolumeType } from 'types/pages/booking'
 
-export const Size: FC<StepType> = ({ data, dispatch }) => {
-  const [sizes, setSizes] = useState<SizeType[]>([])
+export const Volume: FC<StepType> = ({ data, dispatch }) => {
+  const [volumes, setVolumes] = useState<VolumeType[]>([])
   const { showToast } = useContext(GlobalUtils)
 
-  const handleChange = (size: SizeType) => {
+  const handleChange = (volume: VolumeType) => {
     dispatch({
       type: 'handleChange',
-      payload: { name: 'size', value: size },
+      payload: { name: 'volume', value: volume },
     })
 
     showToast.show({
       severity: 'success',
       summary: 'Size of bath',
-      detail: size.attributes.title,
+      detail: volume.attributes.title,
       life: 4000,
     })
   }
@@ -42,17 +42,20 @@ export const Size: FC<StepType> = ({ data, dispatch }) => {
   useEffect(() => {
     ;(async () => {
       const { data } = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/sizes`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/volumes`
       )
-      setSizes(data)
+      setVolumes(data)
     })()
   }, [])
 
   return (
     <>
-      <h2 className={styles.title}>How big is your bathtub?</h2>
+      <h2 className={styles.title}>
+        What sort of flower volume are you looking for?
+      </h2>
+      <p>(This will determine your base price)</p>
       <Row>
-        {sizes.map((item: SizeType, idx: number) => (
+        {volumes.map((item: VolumeType, idx: number) => (
           <Col key={idx} xs={12} sm={6} md={4} className={styles.item}>
             <Image
               className={styles.item_image}
@@ -61,12 +64,11 @@ export const Size: FC<StepType> = ({ data, dispatch }) => {
               height={item.relationships.image.attributes.height}
             />
             <h3>{item.attributes.title}</h3>
-            <p>{item.attributes.description}</p>
             <RadioButton
-              name='size'
+              name='volume'
               className={styles.radio}
-              checked={data.size.attributes.title === item.attributes.title}
-              value={item}
+              checked={data.volume.attributes.title === item.attributes.title}
+              value={item.attributes.title}
               onChange={() => handleChange(item)}
             />
           </Col>

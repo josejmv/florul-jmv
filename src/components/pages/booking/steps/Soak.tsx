@@ -18,22 +18,17 @@ import styles from 'styles/pages/booking/soak.module.scss'
 import type { FC } from 'react'
 import type { StepType, SoakType } from 'types/pages/booking'
 
-export const Soak: FC<StepType> = ({ dispatch }) => {
-  const [selected, setSelected] = useState('')
+export const Soak: FC<StepType> = ({ data, dispatch }) => {
   const [soaks, setSoaks] = useState<SoakType[]>([])
   const { showToast } = useContext(GlobalUtils)
 
-  const handleChange = (ev: RadioButtonChangeParams) => {
-    dispatch({
-      type: 'handleChange',
-      payload: { name: 'soak', value: ev.value },
-    })
-    setSelected(ev.value)
+  const handleChange = (soak: SoakType) => {
+    dispatch({ type: 'handleChange', payload: { name: 'soak', value: soak } })
 
     showToast.show({
       severity: 'success',
       summary: 'Bath soak',
-      detail: ev.value,
+      detail: soak.attributes.color,
       life: 4000,
     })
   }
@@ -69,9 +64,9 @@ export const Soak: FC<StepType> = ({ dispatch }) => {
             <RadioButton
               name='soak'
               className={styles.radio}
-              checked={selected === item.attributes.color}
+              checked={data.soak.attributes.color === item.attributes.color}
               value={item.attributes.color}
-              onChange={handleChange}
+              onChange={() => handleChange(item)}
             />
           </Col>
         ))}
