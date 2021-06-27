@@ -59,6 +59,7 @@ export const Size: FC<StepType> = ({ data, dispatch }) => {
               src={item.relationships.image.attributes.src}
               width={item.relationships.image.attributes.width}
               height={item.relationships.image.attributes.height}
+              alt={item.relationships.image.attributes.alt}
             />
             <h3>{item.attributes.title}</h3>
             <p>{item.attributes.description}</p>

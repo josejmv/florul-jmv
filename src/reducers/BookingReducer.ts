@@ -33,6 +33,7 @@ export const INITIAL_DATA: BookingStateType = {
     type: '',
     id: '',
     attributes: {
+      price: 0,
       image: '',
       title: '',
     },
@@ -41,6 +42,7 @@ export const INITIAL_DATA: BookingStateType = {
     type: '',
     id: '',
     attributes: {
+      price: 0,
       color: '',
       hex: '',
       scent: '',

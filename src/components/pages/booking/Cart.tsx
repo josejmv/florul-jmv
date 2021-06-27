@@ -28,7 +28,7 @@ export const Cart: FC<BookingStateType> = (props) => {
     <Row>
       {props.reason.attributes.title && (
         <Col xs={12}>
-          <h3>{props.reason.attributes.title}'s Box</h3>
+          <h3>{props.reason.attributes.title}&apos;s Box</h3>
         </Col>
       )}
       {props.date && (
