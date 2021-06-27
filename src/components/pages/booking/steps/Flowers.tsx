@@ -129,34 +129,31 @@ export const Flowers: FC<StepType> = ({ data, dispatch }) => {
             <Col className='text-center my-5' xs={12} sm={6} md={2}>
               <Image
                 src='/assets/imgs/light.svg'
-                className='mb-3'
                 height={200}
                 width={170}
                 alt='light'
               />
-              <h5>Light</h5>
+              <h5 className='mt-3'>Light</h5>
               <p>4 - 5 flower head</p>
             </Col>
             <Col className='text-center my-5' xs={12} sm={6} md={2}>
               <Image
                 src='/assets/imgs/scattered.svg'
-                className='mb-3'
                 height={200}
                 width={170}
                 alt='scattered'
               />
-              <h5>Scattered</h5>
+              <h5 className='mt-3'>Scattered</h5>
               <p>6 - 12 flower head</p>
             </Col>
             <Col className='text-center my-5' xs={12} sm={6} md={2}>
               <Image
                 src='/assets/imgs/full.svg'
-                className='mb-3'
                 height={200}
                 width={170}
                 alt='full'
               />
-              <h5>Full</h5>
+              <h5 className='mt-3'>Full</h5>
               <p>13 - 40 flower head</p>
             </Col>
           </Row>

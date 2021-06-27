@@ -39,7 +39,7 @@ export const DateOfEvent: FC<StepType> = ({ data, dispatch }) => {
       <h2 className={styles.title}>When would you take this bath?</h2>
 
       <Row>
-        <Col xs={3}>
+        <Col md={12} lg={3}>
           <p>
             <b>Estimated Shipment Date:</b>
           </p>
@@ -52,7 +52,7 @@ export const DateOfEvent: FC<StepType> = ({ data, dispatch }) => {
             </p>
           )}
         </Col>
-        <Col xs={6} className={styles.calendars}>
+        <Col md={12} lg={6} className={styles.calendars}>
           <Calendar
             showIcon
             value={data.date}

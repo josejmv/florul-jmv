@@ -12,6 +12,7 @@ import 'primereact/resources/themes/saga-blue/theme.css'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import 'styles/globals.scss'
+import styles from 'styles/app.module.scss'
 
 // types
 import type { FC } from 'react'
@@ -26,7 +27,11 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Toast ref={handleSetToast} position='bottom-left' />
+      <Toast
+        className={styles.toast}
+        ref={handleSetToast}
+        position='bottom-left'
+      />
 
       <GlobalUtils.Provider value={context}>
         <Component {...pageProps} />
