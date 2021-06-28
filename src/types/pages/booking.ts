@@ -1,9 +1,10 @@
 // types
-import { Dispatch } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import { BookingActionPayload, BookingStateType } from 'types/reducers'
 
 export type StepType = {
   dispatch: Dispatch<{ type: string; payload: BookingActionPayload }>
+  setKey?: Dispatch<SetStateAction<number>>
   data: BookingStateType
 }
 

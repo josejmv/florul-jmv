@@ -1,0 +1,29 @@
+@import './main.module.scss';
+
+.title {
+  margin: 0;
+  text-align: left;
+}
+.shipping {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_content {
+    max-width: 700px;
+  }
+}
+
+.options {
+  margin: 30px 0;
+  .radio {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    > label {
+      margin: 10px 20px;
+    }
+  }
+}

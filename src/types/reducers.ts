@@ -17,6 +17,7 @@ export type BookingStateType = {
   soak: SoakType
   imperfectPetals: boolean
   imperfectHeads: boolean
+  shipping: number
   flowers: FlowerType[]
   addons: AddonType[]
 }

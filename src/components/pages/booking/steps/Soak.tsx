@@ -3,28 +3,37 @@ import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 
 // bootstrap components
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 
 // prime components
-import { RadioButton, RadioButtonChangeParams } from 'primereact/radiobutton'
+import { RadioButton } from 'primereact/radiobutton'
 
 // context
 import { GlobalUtils } from 'context/GlobalUtils'
 
 // styles
-import styles from 'styles/pages/booking/soak.module.scss'
+import styles from 'styles/pages/booking/main.module.scss'
 
 // types
 import type { FC } from 'react'
 import type { StepType, SoakType } from 'types/pages/booking'
 
-export const Soak: FC<StepType> = ({ data, dispatch }) => {
+export const Soak: FC<StepType> = ({ data, setKey, dispatch }) => {
   const [soaks, setSoaks] = useState<SoakType[]>([])
+  const [invalid, setInvalid] = useState(false)
   const { showToast } = useContext(GlobalUtils)
+
+  const handleNextStep = () => {
+    if (data.soak.attributes.color !== '') setKey((prev) => prev + 10)
+    else setInvalid(true)
+  }
+
+  const handlePrevStep = () => setKey((prev) => prev - 10)
 
   const handleChange = (soak: SoakType) => {
     dispatch({ type: 'handleChange', payload: { name: 'soak', value: soak } })
 
+    invalid && setInvalid(false)
     showToast.show({
       severity: 'success',
       summary: 'Bath soak',
@@ -52,6 +61,8 @@ export const Soak: FC<StepType> = ({ data, dispatch }) => {
         dependent on the color of your tub, lighting, how much water your use,
         etc.
       </p>
+      {invalid && <p className={styles.invalid}>Please choose an option</p>}
+
       <Row>
         {soaks.map((item: SoakType, idx: number) => (
           <Col key={idx} xs={6} md={4} lg={2} className={styles.item}>
@@ -70,6 +81,31 @@ export const Soak: FC<StepType> = ({ data, dispatch }) => {
             />
           </Col>
         ))}
+      </Row>
+
+      <Row className={styles.buttons}>
+        <Col xs={6} md={3}>
+          <Button
+            block
+            className={styles.button}
+            onClick={handlePrevStep}
+            variant='primary'
+            size='lg'
+          >
+            Back
+          </Button>
+        </Col>
+        <Col xs={6} md={3}>
+          <Button
+            block
+            className={styles.button}
+            onClick={handleNextStep}
+            variant='primary'
+            size='lg'
+          >
+            Continue
+          </Button>
+        </Col>
       </Row>
     </>
   )

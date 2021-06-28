@@ -6,7 +6,7 @@ import axios from 'axios'
 import Image from 'next/image'
 
 // bootstrap components
-import { Row, Col, Card } from 'react-bootstrap'
+import { Row, Col, Card, Button } from 'react-bootstrap'
 
 // prime components
 import { Checkbox, CheckboxChangeParams } from 'primereact/checkbox'
@@ -22,9 +22,17 @@ import styles from 'styles/pages/booking/flowers.module.scss'
 import type { FC } from 'react'
 import type { StepType, FlowerType } from 'types/pages/booking'
 
-export const Flowers: FC<StepType> = ({ data, dispatch }) => {
+export const Flowers: FC<StepType> = ({ data, setKey, dispatch }) => {
   const [flowers, setFlowers] = useState<FlowerType[]>([])
+  const [invalid, setInvalid] = useState(false)
   const { showToast } = useContext(GlobalUtils)
+
+  const handleNextStep = () => {
+    if (data.flowers.length > 0) setKey((prev) => prev + 10)
+    else setInvalid(true)
+  }
+
+  const handlePrevStep = () => setKey((prev) => prev - 10)
 
   const findItem = (item: FlowerType): number =>
     data.flowers.filter((flower: FlowerType) => item.id === flower.id).length
@@ -36,6 +44,7 @@ export const Flowers: FC<StepType> = ({ data, dispatch }) => {
         payload: { name: 'flowers', value: flower, idx },
       })
 
+      invalid && setInvalid(false)
       showToast.show({
         severity: 'success',
         summary: 'Flower added',
@@ -52,6 +61,7 @@ export const Flowers: FC<StepType> = ({ data, dispatch }) => {
         payload: { name: 'flowers', value: remove },
       })
 
+      invalid && setInvalid(false)
       showToast.show({
         severity: 'warn',
         summary: 'Flower removed',
@@ -80,6 +90,7 @@ export const Flowers: FC<StepType> = ({ data, dispatch }) => {
     <>
       <h2 className={styles.title}>Choose your flowers:</h2>
       <p>Add the flowers of your choice.</p>
+
       <Row>
         <Col xs={12} className='my-4'>
           <div className={styles.checkbox}>
@@ -158,6 +169,11 @@ export const Flowers: FC<StepType> = ({ data, dispatch }) => {
             </Col>
           </Row>
         </Col>
+        <Col xs={12}>
+          {invalid && (
+            <p className={styles.invalid}>Choose at least one type of flower</p>
+          )}
+        </Col>
         {flowers.map((item: FlowerType, idx: number) => (
           <Col key={idx} xs={6} sm={4} lg={3} className={styles.container}>
             <Card
@@ -180,6 +196,31 @@ export const Flowers: FC<StepType> = ({ data, dispatch }) => {
             </Card>
           </Col>
         ))}
+      </Row>
+
+      <Row className={styles.buttons}>
+        <Col xs={6} md={3}>
+          <Button
+            block
+            className={styles.button}
+            onClick={handlePrevStep}
+            variant='primary'
+            size='lg'
+          >
+            Back
+          </Button>
+        </Col>
+        <Col xs={6} md={3}>
+          <Button
+            block
+            className={styles.button}
+            onClick={handleNextStep}
+            variant='primary'
+            size='lg'
+          >
+            Continue
+          </Button>
+        </Col>
       </Row>
     </>
   )

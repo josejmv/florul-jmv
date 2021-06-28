@@ -1,0 +1,14 @@
+@import './main.module.scss';
+
+.col {
+  text-align: center;
+  .edit {
+    color: #b68787;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 0 0 5px;
+  }
+  .list_item {
+    list-style: none;
+  }
+}

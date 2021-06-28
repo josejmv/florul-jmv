@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 
 // bootstrap components
-import { Row, Col, Card } from 'react-bootstrap'
+import { Row, Col, Card, Button } from 'react-bootstrap'
 
 // contexts
 import { GlobalUtils } from 'context/GlobalUtils'
@@ -15,9 +15,15 @@ import styles from 'styles/pages/booking/reason.module.scss'
 import type { FC } from 'react'
 import type { StepType, ReasonType } from 'types/pages/booking'
 
-export const Reason: FC<StepType> = ({ data, dispatch }) => {
+export const Reason: FC<StepType> = ({ data, setKey, dispatch }) => {
   const [reasons, setReasons] = useState([])
+  const [invalid, setInvalid] = useState(false)
   const { showToast } = useContext(GlobalUtils)
+
+  const handleNextStep = () => {
+    if (data.reason.attributes.title !== '') setKey((prev) => prev + 10)
+    else setInvalid(true)
+  }
 
   const handleClick = (reason: ReasonType) => {
     dispatch({
@@ -25,6 +31,7 @@ export const Reason: FC<StepType> = ({ data, dispatch }) => {
       payload: { name: 'reason', value: reason },
     })
 
+    invalid && setInvalid(false)
     showToast.show({
       severity: 'success',
       summary: 'Reazon',
@@ -53,6 +60,7 @@ export const Reason: FC<StepType> = ({ data, dispatch }) => {
         logistics out of the way, so we can start diving into the fun stuff :)
       </p>
       <h2 className={styles.title}>What is this bath for?</h2>
+      {invalid && <p className={styles.invalid}>Please, choose a reazon</p>}
 
       <Row>
         {reasons.map((reason: ReasonType, idx: number) => (
@@ -72,6 +80,20 @@ export const Reason: FC<StepType> = ({ data, dispatch }) => {
             </Card>
           </Col>
         ))}
+      </Row>
+
+      <Row className={styles.buttons}>
+        <Col xs={6} md={3}>
+          <Button
+            block
+            className={styles.button}
+            onClick={handleNextStep}
+            variant='primary'
+            size='lg'
+          >
+            Continue
+          </Button>
+        </Col>
       </Row>
     </>
   )

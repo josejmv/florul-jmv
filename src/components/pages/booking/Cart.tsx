@@ -10,7 +10,7 @@ import type { BookingStateType } from 'types/reducers'
 import type { FlowerType, AddonType } from 'types/pages/booking'
 
 export const Cart: FC<BookingStateType> = (props) => {
-  const getPrice = () => {
+  const getPrice = (): number => {
     let price = props.size.attributes.price || 0
     price += props.volume.attributes.price || 0
     price += props.soak.attributes.price || 0
