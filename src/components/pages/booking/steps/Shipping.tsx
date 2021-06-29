@@ -1,3 +1,6 @@
+// main tools
+import { useState } from 'react'
+
 // bootstrap components
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
@@ -12,14 +15,21 @@ import type { FC } from 'react'
 import type { StepType } from 'types/pages/booking'
 
 export const Shipping: FC<StepType> = ({ data, setKey, dispatch }) => {
-  const handlePrevStep = () => setKey((prev) => prev - 5)
-  const handleNextStep = () => setKey((prev) => prev + 5)
+  const [validate, setValidate] = useState(false)
 
-  const handleChange = (days: number) =>
+  const handlePrevStep = () => setKey((prev) => prev - 5)
+  const handleNextStep = () => {
+    if (data.shipping !== 0) setKey((prev) => prev + 5)
+    else setValidate(true)
+  }
+
+  const handleChange = (days: number) => {
+    validate && setValidate(false)
     dispatch({
       type: 'handleChange',
       payload: { name: 'shipping', value: days },
     })
+  }
 
   return (
     <Container>
@@ -30,6 +40,9 @@ export const Shipping: FC<StepType> = ({ data, setKey, dispatch }) => {
             Event date: {data.date.getDate()}/{data.date.getMonth()}/
             {data.date.getFullYear()}
           </h4>
+          {validate && (
+            <p className={styles.invalid}>Please choose an option</p>
+          )}
 
           <div className={styles.options}>
             <div className={styles.radio}>

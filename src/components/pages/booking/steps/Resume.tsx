@@ -9,6 +9,8 @@ import type { FC } from 'react'
 import type { StepType, FlowerType, AddonType } from 'types/pages/booking'
 
 export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
+  const SIZE_STEP = 30
+  const VOLUME_STEP = 40
   const SOAK_STEP = 50
   const FLOWER_STEP = 60
   const ADDONS_STEP = 70
@@ -44,6 +46,32 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
       <Row>
         <Col xs={12} className={styles.col}>
           <Button
+            onClick={() => setKey(SIZE_STEP)}
+            variant='transparent'
+            className={styles.edit}
+          >
+            Edit
+          </Button>
+          <span>
+            <b>Bath Size</b> x {data.size.attributes.title} - $
+            {data.size.attributes.price}
+          </span>
+        </Col>
+        <Col xs={12} className={styles.col}>
+          <Button
+            onClick={() => setKey(VOLUME_STEP)}
+            variant='transparent'
+            className={styles.edit}
+          >
+            Edit
+          </Button>
+          <span>
+            <b>Bath Volume</b> x {data.volume.attributes.title} - $
+            {data.volume.attributes.price}
+          </span>
+        </Col>
+        <Col xs={12} className={styles.col}>
+          <Button
             onClick={() => setKey(SOAK_STEP)}
             variant='transparent'
             className={styles.edit}
@@ -51,7 +79,8 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
             Edit
           </Button>
           <span>
-            <b>Bath Soak</b> x {data.soak.attributes.color}
+            <b>Bath Soak</b> x {data.soak.attributes.color} - $
+            {data.soak.attributes.price}
           </span>
         </Col>
         <Col xs={12} className={styles.col}>
@@ -68,7 +97,7 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
           <ul>
             {data.flowers.map((flower: FlowerType, idx: number) => (
               <li className={styles.list_item} key={idx}>
-                X {flower.attributes.name} - ${flower.attributes.highPrice}
+                x {flower.attributes.name} - ${flower.attributes.highPrice}
               </li>
             ))}
           </ul>
@@ -87,7 +116,7 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
           <ul>
             {data.addons.map((addon: AddonType, idx: number) => (
               <li className={styles.list_item} key={idx}>
-                X {addon.relationships.taxonomy.attributes.name} - $
+                x {addon.relationships.taxonomy.attributes.name} - $
                 {addon.attributes.price}
               </li>
             ))}

@@ -34,7 +34,7 @@ export const Reason: FC<StepType> = ({ data, setKey, dispatch }) => {
     invalid && setInvalid(false)
     showToast.show({
       severity: 'success',
-      summary: 'Reazon',
+      summary: 'Reason',
       detail: reason.attributes.title,
       life: 4000,
     })
@@ -60,7 +60,7 @@ export const Reason: FC<StepType> = ({ data, setKey, dispatch }) => {
         logistics out of the way, so we can start diving into the fun stuff :)
       </p>
       <h2 className={styles.title}>What is this bath for?</h2>
-      {invalid && <p className={styles.invalid}>Please, choose a reazon</p>}
+      {invalid && <p className={styles.invalid}>Please, choose a reason</p>}
 
       <Row>
         {reasons.map((reason: ReasonType, idx: number) => (
