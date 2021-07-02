@@ -3,3 +3,12 @@
     max-width: fit-content;
   }
 }
+
+.sidebar {
+  &_mobile {
+    display: none;
+    @media (max-width: 770px) {
+      display: block;
+    }
+  }
+}

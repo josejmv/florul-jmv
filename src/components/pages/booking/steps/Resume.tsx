@@ -8,7 +8,7 @@ import styles from 'styles/pages/booking/resume.module.scss'
 import type { FC } from 'react'
 import type { StepType, FlowerType, AddonType } from 'types/pages/booking'
 
-export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
+export const Resume: FC<StepType> = ({ data, setKey }) => {
   const SIZE_STEP = 30
   const VOLUME_STEP = 40
   const SOAK_STEP = 50
@@ -19,6 +19,7 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
     let price = data.size.attributes.price || 0
     price += data.volume.attributes.price || 0
     price += data.soak.attributes.price || 0
+    price += data.shipping.attributes.price || 0
     data.addons.map((addon: AddonType) => {
       price += addon.attributes.price || 0
     })
@@ -30,14 +31,7 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
   }
 
   const handlePrevStep = () => setKey((prev) => prev - 10)
-
-  const handleNextStep = () => {
-    dispatch({
-      type: 'handleChange',
-      payload: { name: 'price', value: getPrice() },
-    })
-    setKey((prev) => prev + 5)
-  }
+  const handleNextStep = () => setKey((prev) => prev + 5)
 
   return (
     <>
@@ -122,6 +116,13 @@ export const Resume: FC<StepType> = ({ data, setKey, dispatch }) => {
             ))}
           </ul>
         </Col>
+        {data.shipping.id !== '' && (
+          <Col xs={12} className={styles.col}>
+            <span>
+              <b>Shipping ${data.shipping.attributes.price}</b>
+            </span>
+          </Col>
+        )}
         <Col xs={12} className={styles.col}>
           <span>
             <b>Total: ${getPrice()}</b>

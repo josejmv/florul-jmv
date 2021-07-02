@@ -10,7 +10,15 @@ export const INITIAL_DATA: BookingStateType = {
   message: '',
   imperfectPetals: false,
   imperfectHeads: false,
-  shipping: 0,
+  shipping: {
+    type: '',
+    id: '',
+    attributes: {
+      title: '',
+      description: '',
+      price: 0,
+    },
+  },
   flowers: [],
   addons: [],
   reason: {

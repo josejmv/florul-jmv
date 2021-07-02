@@ -1,5 +1,6 @@
 // main tools
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 // bootstrap components
 import { Container, Row, Col, Button } from 'react-bootstrap'
@@ -12,24 +13,59 @@ import styles from 'styles/pages/booking/shipping.module.scss'
 
 // types
 import type { FC } from 'react'
-import type { StepType } from 'types/pages/booking'
+import type {
+  StepType,
+  ShippingType,
+  AddonType,
+  FlowerType,
+} from 'types/pages/booking'
 
 export const Shipping: FC<StepType> = ({ data, setKey, dispatch }) => {
   const [validate, setValidate] = useState(false)
+  const [shippings, setShippings] = useState<ShippingType[]>([])
+
+  const getPrice = (): number => {
+    let price = data.size.attributes.price || 0
+    price += data.volume.attributes.price || 0
+    price += data.soak.attributes.price || 0
+    price += data.shipping.attributes.price || 0
+    data.addons.map((addon: AddonType) => {
+      price += addon.attributes.price || 0
+    })
+    data.flowers.map((flower: FlowerType) => {
+      price += flower.attributes.highPrice || 0
+    })
+
+    return price
+  }
 
   const handlePrevStep = () => setKey((prev) => prev - 5)
   const handleNextStep = () => {
-    if (data.shipping !== 0) setKey((prev) => prev + 5)
-    else setValidate(true)
+    if (data.shipping.id !== '') {
+      dispatch({
+        type: 'handleChange',
+        payload: { name: 'price', value: getPrice() },
+      })
+      setKey((prev) => prev + 5)
+    } else setValidate(true)
   }
 
-  const handleChange = (days: number) => {
+  const handleChange = (option: ShippingType) => {
     validate && setValidate(false)
     dispatch({
       type: 'handleChange',
-      payload: { name: 'shipping', value: days },
+      payload: { name: 'shipping', value: option },
     })
   }
+
+  useEffect(() => {
+    ;(async () => {
+      const { data } = await axios.get(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/shippings`
+      )
+      setShippings(data)
+    })()
+  }, [])
 
   return (
     <Container>
@@ -45,44 +81,26 @@ export const Shipping: FC<StepType> = ({ data, setKey, dispatch }) => {
           )}
 
           <div className={styles.options}>
-            <div className={styles.radio}>
-              <RadioButton
-                inputId='shipping 1'
-                name='shipping'
-                checked={data.shipping === 3}
-                value={3}
-                onChange={() => handleChange(3)}
-              />
-              <label htmlFor='shipping 1'>
-                <b>3 day shipping: $7</b>
-              </label>
-            </div>
-            <div className={styles.radio}>
-              <RadioButton
-                inputId='shipping 1'
-                name='shipping'
-                checked={data.shipping === 2}
-                value={2}
-                onChange={() => handleChange(2)}
-              />
-              <label htmlFor='shipping 1'>
-                <b>2 day shipping: $15</b>
-              </label>
-              <span>-- most popular option</span>
-            </div>
-            <div className={styles.radio}>
-              <RadioButton
-                inputId='shipping 1'
-                name='shipping'
-                checked={data.shipping === 1}
-                value={1}
-                onChange={() => handleChange(1)}
-              />
-              <label htmlFor='shipping 1'>
-                <b>Overnight: $24.95</b>
-              </label>
-              <span>-- recommended for the freshest flowers</span>
-            </div>
+            {shippings.map((item: ShippingType, idx: number) => (
+              <div className={styles.radio}>
+                <RadioButton
+                  inputId={`shipping ${idx}`}
+                  name='shipping'
+                  checked={data.shipping.id === item.id}
+                  value={item}
+                  onChange={() => handleChange(item)}
+                />
+                <label htmlFor='shipping 1'>
+                  <b>
+                    {item.attributes.title}: ${item.attributes.price}
+                  </b>
+                </label>
+                <span>
+                  {item.attributes.description !== '' &&
+                    `-- ${item.attributes.description}`}
+                </span>
+              </div>
+            ))}
           </div>
 
           <Row className={styles.buttons}>

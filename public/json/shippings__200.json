@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "type": "node--shipping",
+      "id": "1",
+      "attributes": {
+        "title": "3 day shipping",
+        "description": "",
+        "price": 7
+      }
+    },
+    {
+      "type": "node--shipping",
+      "id": "2",
+      "attributes": {
+        "title": "2 day shipping",
+        "description": "most popular option",
+        "price": 15
+      }
+    },
+    {
+      "type": "node--shipping",
+      "id": "3",
+      "attributes": {
+        "title": "Overnight",
+        "description": "recommended for the freshest flowers",
+        "price": 24.95
+      }
+    }
+  ]
+}

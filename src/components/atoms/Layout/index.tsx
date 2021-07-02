@@ -14,7 +14,9 @@ import type { LayoutType } from 'types'
 export const Layout: FC<LayoutType> = ({
   title,
   bg,
+  fluid = false,
   setShowSidebar,
+  mobileSidebar,
   children,
 }) => (
   <>
@@ -22,8 +24,12 @@ export const Layout: FC<LayoutType> = ({
       <title>Florül {title && `| ${title}`}</title>
     </Head>
 
-    <Header bg={bg} setShowSidebar={setShowSidebar} />
-    <Container as='main' className='py-5'>
+    <Header
+      bg={bg}
+      mobileSidebar={mobileSidebar}
+      setShowSidebar={setShowSidebar}
+    />
+    <Container fluid={fluid} as='main' className='py-5'>
       {children}
     </Container>
   </>

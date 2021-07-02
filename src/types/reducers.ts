@@ -5,6 +5,7 @@ import {
   SoakType,
   FlowerType,
   AddonType,
+  ShippingType,
 } from 'types/pages/booking'
 
 export type BookingStateType = {
@@ -17,7 +18,7 @@ export type BookingStateType = {
   soak: SoakType
   imperfectPetals: boolean
   imperfectHeads: boolean
-  shipping: number
+  shipping: ShippingType
   flowers: FlowerType[]
   addons: AddonType[]
 }

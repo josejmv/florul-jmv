@@ -1,9 +1,10 @@
 @import './main.module.scss';
+@import '../../theme.scss';
 
 .col {
   text-align: center;
   .edit {
-    color: #b68787;
+    color: $secondary;
     font-weight: bold;
     margin-right: 10px;
     padding: 0 0 5px;

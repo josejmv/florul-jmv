@@ -64,7 +64,7 @@ export const DateOfEvent: FC<StepType> = ({ data, setKey, dispatch }) => {
         </Col>
         <Col md={12} lg={6} className={styles.calendars}>
           <Calendar
-            showIcon
+            readOnlyInput
             value={data.date}
             showOnFocus={false}
             onChange={handleChange}

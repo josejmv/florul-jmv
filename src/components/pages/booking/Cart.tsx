@@ -14,6 +14,7 @@ export const Cart: FC<BookingStateType> = (props) => {
     let price = props.size.attributes.price || 0
     price += props.volume.attributes.price || 0
     price += props.soak.attributes.price || 0
+    price += props.shipping.attributes.price || 0
     props.addons.map((addon: AddonType) => {
       price += addon.attributes.price || 0
     })
@@ -26,9 +27,14 @@ export const Cart: FC<BookingStateType> = (props) => {
 
   return (
     <Row>
-      {props.reason.attributes.title && (
+      {props.reason.attributes.title ? (
         <Col xs={12}>
           <h3>{props.reason.attributes.title}&apos;s Box</h3>
+        </Col>
+      ) : (
+        <Col className='text-center' xs={12}>
+          <h3>The box empty</h3>
+          <p>Please feel comfortable choosing the bests choices for your box</p>
         </Col>
       )}
       {props.date && (
@@ -93,6 +99,15 @@ export const Cart: FC<BookingStateType> = (props) => {
               <Col xs={6}>{addon.attributes.price}$</Col>
             </Fragment>
           ))}
+        </>
+      )}
+      {props.shipping.id !== '' && (
+        <>
+          <Col className='mt-3' xs={12}>
+            <b>Shipping:</b>
+          </Col>
+          <Col xs={6}>{props.shipping.attributes.title}</Col>
+          <Col xs={6}>${props.shipping.attributes.price}</Col>
         </>
       )}
       {props.reason.attributes.title && (

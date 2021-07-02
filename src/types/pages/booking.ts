@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react'
 import { BookingActionPayload, BookingStateType } from 'types/reducers'
 
 export type StepType = {
-  dispatch: Dispatch<{ type: string; payload: BookingActionPayload }>
+  dispatch?: Dispatch<{ type: string; payload: BookingActionPayload }>
   setKey?: Dispatch<SetStateAction<number>>
   data: BookingStateType
 }
@@ -92,6 +92,16 @@ export type AddonType = {
     taxonomy: TaxonomyType
     company: CompanyType
     image: ImageType
+  }
+}
+
+export type ShippingType = {
+  type: string
+  id: string
+  attributes: {
+    title: string
+    description: string
+    price: number
   }
 }
 

@@ -6,11 +6,17 @@ import Link from 'next/link'
 import { Navbar, Button } from 'react-bootstrap'
 import { List } from 'react-bootstrap-icons'
 
+import styles from 'styles/app.module.scss'
+
 // types
 import type { FC } from 'react'
 import type { HeaderType } from 'types'
 
-export const Header: FC<HeaderType> = ({ bg, setShowSidebar }) => {
+export const Header: FC<HeaderType> = ({
+  bg,
+  mobileSidebar,
+  setShowSidebar,
+}) => {
   const handleClick = () => setShowSidebar && setShowSidebar(true)
 
   return (
@@ -21,7 +27,11 @@ export const Header: FC<HeaderType> = ({ bg, setShowSidebar }) => {
         </Navbar.Brand>
       </Link>
       {setShowSidebar && (
-        <Button onClick={handleClick} variant='transparent'>
+        <Button
+          className={mobileSidebar && styles.sidebar_mobile}
+          onClick={handleClick}
+          variant='transparent'
+        >
           <List size={50} />
         </Button>
       )}
