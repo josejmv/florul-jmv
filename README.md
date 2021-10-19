@@ -10,7 +10,7 @@ First, add the environment variables.
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
-Open [Florul](https://florul.vercel.app/) with your browser to see the example page.
+Open [Florul](https://florul-jmv.vercel.app/) with your browser to see the example page.
 
 # platforms
 
