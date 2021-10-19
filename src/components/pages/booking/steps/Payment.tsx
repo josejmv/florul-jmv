@@ -106,7 +106,7 @@ export const Payment: FC<StepType> = ({ data, setKey, dispatch }) => {
           </h4>
         </Modal.Header>
         <Modal.Body>
-          <h1>In maintenance</h1>
+          <h6>Thanks for your payment</h6>
         </Modal.Body>
       </Modal>
     </>

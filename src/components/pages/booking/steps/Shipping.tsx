@@ -82,7 +82,7 @@ export const Shipping: FC<StepType> = ({ data, setKey, dispatch }) => {
 
           <div className={styles.options}>
             {shippings.map((item: ShippingType, idx: number) => (
-              <div className={styles.radio}>
+              <div key={idx} className={styles.radio}>
                 <RadioButton
                   inputId={`shipping ${idx}`}
                   name='shipping'

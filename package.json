@@ -1,6 +1,11 @@
 {
-  "name": "web",
-  "version": "0.1.0",
+  "name": "florul",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jose Vasquez",
+    "email": "josejmvasquez@gmail.com",
+    "url": "https://josejmv.vercel.app"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
