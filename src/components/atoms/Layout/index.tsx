@@ -41,7 +41,10 @@ export const Layout: FC<LayoutType> = ({
           property='og:title'
           content={`Florül ${title ? `| ${title}` : ''}`}
         />
-        <meta property='og:description' content='florul' />
+        <meta
+          property='og:description'
+          content='florul, personal project made by JoseJMV'
+        />
         {/* <meta property='og:image' content={metaData.ogImage?.url} /> */}
       </Head>
 
