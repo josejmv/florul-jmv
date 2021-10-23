@@ -142,6 +142,7 @@ export const Flowers: FC<StepType> = ({ data, setKey, dispatch }) => {
                 src='/assets/imgs/light.svg'
                 height={200}
                 width={170}
+                quality={10}
                 alt='light'
               />
               <h5 className='mt-3'>Light</h5>
@@ -152,6 +153,7 @@ export const Flowers: FC<StepType> = ({ data, setKey, dispatch }) => {
                 src='/assets/imgs/scattered.svg'
                 height={200}
                 width={170}
+                quality={10}
                 alt='scattered'
               />
               <h5 className='mt-3'>Scattered</h5>
@@ -162,6 +164,7 @@ export const Flowers: FC<StepType> = ({ data, setKey, dispatch }) => {
                 src='/assets/imgs/full.svg'
                 height={200}
                 width={170}
+                quality={10}
                 alt='full'
               />
               <h5 className='mt-3'>Full</h5>
@@ -180,12 +183,13 @@ export const Flowers: FC<StepType> = ({ data, setKey, dispatch }) => {
               onClick={() => handleClick(item, idx)}
               className={styles.card}
             >
-              <Card.Img
+              <Image
                 className={styles.card_img}
                 src={item.relationships.images[0].attributes.src}
                 height={item.relationships.images[0].attributes.height}
                 width={item.relationships.images[0].attributes.width}
                 alt={item.type}
+                quality={30}
               />
               <Card.ImgOverlay className={styles.card_content}>
                 <Card.Title>{item.attributes.name}</Card.Title>

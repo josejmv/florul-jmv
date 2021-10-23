@@ -11,7 +11,8 @@ export type StepType = {
 export type ReasonType = {
   type: string
   id: string
-  attributes: { title: string }
+  attributes: { title: string; image: string }
+  relationships: { image: ImageType }
 }
 
 export type SizeType = {

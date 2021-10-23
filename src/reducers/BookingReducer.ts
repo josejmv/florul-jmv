@@ -26,6 +26,19 @@ export const INITIAL_DATA: BookingStateType = {
     id: '',
     attributes: {
       title: '',
+      image: '',
+    },
+    relationships: {
+      image: {
+        type: '',
+        id: '',
+        attributes: {
+          src: '',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+      },
     },
   },
   size: {
