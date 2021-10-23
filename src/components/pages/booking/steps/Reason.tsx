@@ -2,6 +2,9 @@
 import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 
+// components
+import Image from 'next/image'
+
 // bootstrap components
 import { Row, Col, Card, Button } from 'react-bootstrap'
 
@@ -66,10 +69,13 @@ export const Reason: FC<StepType> = ({ data, setKey, dispatch }) => {
         {reasons.map((reason: ReasonType, idx: number) => (
           <Col key={idx} xs={6} sm={4} lg={3} className={styles.container}>
             <Card onClick={() => handleClick(reason)} className={styles.card}>
-              <Card.Img
+              <Image
                 className={styles.card_img}
-                src='http://placehold.it/100x100'
-                alt={reason.type}
+                src={reason.relationships.image.attributes.src}
+                width={reason.relationships.image.attributes.width}
+                height={reason.relationships.image.attributes.height}
+                alt={reason.relationships.image.attributes.alt}
+                quality={30}
               />
               <Card.ImgOverlay className={styles.card_content}>
                 <Card.Title>{reason.attributes.title}</Card.Title>

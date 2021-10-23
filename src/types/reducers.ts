@@ -37,10 +37,13 @@ export type BookingActionPayload = {
     | Date
     | string
     | boolean
-    | string[]
     | FlowerType
-    | FlowerType[]
     | AddonType
+    | string[]
+    | FlowerType[]
     | AddonType[]
+    | SizeType
+    | VolumeType
+    | ShippingType
   idx?: number
 }

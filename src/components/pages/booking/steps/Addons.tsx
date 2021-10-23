@@ -5,6 +5,9 @@ import axios from 'axios'
 // bootstrap components
 import { Row, Col, Card, Button } from 'react-bootstrap'
 
+// next components
+import Image from 'next/image'
+
 // contexts
 import { GlobalUtils } from 'context/GlobalUtils'
 
@@ -89,12 +92,13 @@ export const Addons: FC<StepType> = ({ data, setKey, dispatch }) => {
               onClick={() => handleClick(item, idx)}
               className={styles.card}
             >
-              <Card.Img
+              <Image
                 className={styles.card_img}
                 src={item.relationships.image.attributes.src}
                 height={item.relationships.image.attributes.height}
                 width={item.relationships.image.attributes.width}
                 alt={item.type}
+                quality={30}
               />
               <Card.ImgOverlay className={styles.card_content}>
                 <Card.Title>

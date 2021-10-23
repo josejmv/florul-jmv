@@ -4,56 +4,176 @@
       "type": "node--reason",
       "id": "1",
       "attributes": {
-        "title": "Anniversary"
+        "title": "Anniversary",
+        "image": "0001-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0001-reason",
+          "attributes": {
+            "src": "/assets/reason/aniversary.webp",
+            "width": 200,
+            "height": 200,
+            "alt": "aniversary",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "2",
       "attributes": {
-        "title": "Birthday"
+        "title": "Birthday",
+        "image": "0002-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0002-reason",
+          "attributes": {
+            "src": "/assets/reason/birthday.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "birthday",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "3",
       "attributes": {
-        "title": "Wedding Night"
+        "title": "Wedding Night",
+        "image": "0003-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0003-reason",
+          "attributes": {
+            "src": "/assets/reason/wedding.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "wedding",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "4",
       "attributes": {
-        "title": "Bridal Ritual"
+        "title": "Bridal Ritual",
+        "image": "0004-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0004-reason",
+          "attributes": {
+            "src": "/assets/reason/bridal.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "bridal",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "5",
       "attributes": {
-        "title": "Self Love"
+        "title": "Self Love",
+        "image": "0005-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0005-reason",
+          "attributes": {
+            "src": "/assets/reason/self.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "self love",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "6",
       "attributes": {
-        "title": "Moon Ritual"
+        "title": "Moon Ritual",
+        "image": "0006-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0006-reason",
+          "attributes": {
+            "src": "/assets/reason/moon.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "moon ritual",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "7",
       "attributes": {
-        "title": "Detox"
+        "title": "Detox",
+        "image": "0007-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0007-reason",
+          "attributes": {
+            "src": "/assets/reason/detox.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "detox",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     },
     {
       "type": "node--reason",
       "id": "8",
       "attributes": {
-        "title": "I’m a witch"
+        "title": "I’m a witch",
+        "image": "0008-reason"
+      },
+      "relationships": {
+        "image": {
+          "type": "node--media",
+          "id": "0008-reason",
+          "attributes": {
+            "src": "/assets/reason/witch.jpg",
+            "width": 200,
+            "height": 200,
+            "alt": "witch",
+            "author": "JoseJMV",
+            "visibility": 1
+          }
+        }
       }
     }
   ]

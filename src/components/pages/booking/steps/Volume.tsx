@@ -74,6 +74,7 @@ export const Volume: FC<StepType> = ({ data, setKey, dispatch }) => {
               width={item.relationships.image.attributes.width}
               height={item.relationships.image.attributes.height}
               alt={item.relationships.image.attributes.alt}
+              quality={10}
             />
             <h3>{item.attributes.title}</h3>
             <RadioButton

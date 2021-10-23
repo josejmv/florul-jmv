@@ -7,7 +7,9 @@
         "name": "Acaena",
         "scientictName": "Acaena microphylla",
         "description": "Hojas de color verde claro que permanecen verdes incluso en el frío invierno, divididas finamente y de color bronceado en las plantas jóvenes.",
-        "images": ["0001-zzza"],
+        "images": [
+          "0001-zzza"
+        ],
         "origin": "Crece en suelos bien drenados.",
         "commonlyFound": true,
         "highPrice": 11.5,
@@ -21,8 +23,8 @@
             "id": "0001-zzza",
             "attributes": {
               "src": "/assets/product_types/Flowers/flowers-tbHVy6gs.jpg",
-              "width": 150,
-              "height": 150,
+              "width": 200,
+              "height": 200,
               "alt": "flower"
             }
           }
@@ -36,7 +38,9 @@
         "name": "Bellorita",
         "scientictName": "Bellis perennis",
         "description": "Sus flores vienen en botones compactos y su colorido es muy variado como el blanco, rosa y rojo entre otros.",
-        "images": ["0010-zzaz"],
+        "images": [
+          "0010-zzaz"
+        ],
         "origin": "Sur de Europa y Norte de Africa.",
         "commonlyFound": true,
         "highPrice": 10.5,
