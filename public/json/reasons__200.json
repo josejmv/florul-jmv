@@ -12,7 +12,7 @@
           "type": "node--media",
           "id": "0001-reason",
           "attributes": {
-            "src": "/assets/reason/aniversary.webp",
+            "src": "/assets/reason/aniversary.jpg",
             "width": 200,
             "height": 200,
             "alt": "aniversary",
