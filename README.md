@@ -1,4 +1,4 @@
-[![GitHub contributors](https://img.shields.io/github/contributors/josejmv/todo-test)](https://github.com/josejmv/todo-test/graphs/contributors) ![Tested Next.js versions](https://img.shields.io/badge/tested%20next.js%20versions-10.2.3%20|%2011.x-blue)
+[![GitHub contributors](https://img.shields.io/github/contributors/josejmv/florul-jmv)](https://github.com/josejmv/florul-jmv/graphs/contributors) ![Tested Next.js versions](https://img.shields.io/badge/tested%20next.js%20versions-10.2.3%20|%2011.x-blue)
 
 # florul
 
