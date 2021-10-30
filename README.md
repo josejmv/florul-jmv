@@ -1,4 +1,4 @@
-[![GitHub contributors](https://img.shields.io/github/contributors/josejmv/florul-jmv)](https://github.com/josejmv/florul-jmv/graphs/contributors) ![Tested Next.js versions](https://img.shields.io/badge/tested%20next.js%20versions-10.2.3%20|%2011.x-blue)
+[![GitHub contributors](https://img.shields.io/github/contributors/josejmv/florul-jmv)](https://github.com/josejmv/florul-jmv/graphs/contributors) [![forks](https://img.shields.io/github/forks/josejmv/florul-jmv)](https://github.com/josejmv/florul-jmv/fork) ![stars](https://img.shields.io/github/stars/josejmv/florul-jmv) [![License](https://img.shields.io/github/license/josejmv/florul-jmv)](LICENSE) ![followers](https://img.shields.io/github/followers/josejmv.svg?style=social&label=JoseJMV&maxAge=2592000) ![Tested Next.js versions](https://img.shields.io/badge/tested%20next.js%20versions-11.x-blue)
 
 # florul
 
@@ -22,4 +22,8 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # License
 
-MIT, **Free Software**
+MIT [licensed](LICENSE).
+
+### Socials
+
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/josemvasquezv) [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/josejmv) [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/josejmv)
